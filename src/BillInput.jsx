@@ -13,7 +13,7 @@ export default function BillInput() {
         <input
           type="text"
           placeholder="0"
-          className="bg-slate-100/70 outline-none w-full font-space-mono text-right text-custom-gray-400 font-bold px-4 py-2"
+          className="bg-slate-100/70 outline-none w-full font-space-mono text-right text-custom-gray-400 font-bold px-4 py-2 rounded-lg"
         />
       </div>
     </div>
