@@ -1,3 +1,9 @@
+import BillInput from "./BillInput.jsx";
+
 export default function CalculationContainer() {
-  return <div></div>;
+  return (
+    <div>
+      <BillInput />
+    </div>
+  );
 }
