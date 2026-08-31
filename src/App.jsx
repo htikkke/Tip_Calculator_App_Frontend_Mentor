@@ -11,7 +11,7 @@ export default function App() {
       </p>
       <div
         id="main-container"
-        className="w-full max-w-2xl mt-16 bg-white rounded-2xl p-6"
+        className="w-full max-w-2xl mt-16 bg-white rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8"
       >
         <CalculationContainer />
         <ResultContainer />
