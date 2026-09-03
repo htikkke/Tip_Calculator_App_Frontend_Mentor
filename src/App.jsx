@@ -9,6 +9,8 @@ export default function App() {
   const [nopInput, setNopInput] = useState("");
   const [bill, setBill] = useState("");
   const [tip, setTip] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const [tipAmount, setTipAmount] = useState(0);
 
   return (
     <FormContext.Provider
@@ -21,6 +23,10 @@ export default function App() {
         setBill,
         tip,
         setTip,
+        totalAmount,
+        setTotalAmount,
+        tipAmount,
+        setTipAmount,
       }}
     >
       <div className="w-full min-h-screen bg-custom-gray-200 flex flex-col items-center justify-center">

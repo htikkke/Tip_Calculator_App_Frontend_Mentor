@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { FormContext } from "./App";
+
 export default function TipAmount() {
+  const { tipAmount } = useContext(FormContext);
+
   return (
     <div className="flex items-center justify-between">
       <div>
@@ -8,7 +13,8 @@ export default function TipAmount() {
         <p className="text-custom-gray-400 font-space-mono text-xs">/ person</p>
       </div>
       <p className="text-custom-green-400 font-bold text-2xl font-space-mono">
-        $0.00
+        $
+        {tipAmount && !isNaN(tipAmount) ? Number(tipAmount).toFixed(2) : "0.00"}
       </p>
     </div>
   );
