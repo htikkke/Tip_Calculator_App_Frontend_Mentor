@@ -4,6 +4,25 @@ import ResultContainer from "./ResultContainer";
 
 export const FormContext = createContext();
 
+export const finalCalculation = (bill, tip, nop) => {
+  const billInput = parseFloat(bill) || 0;
+  const tipInput = parseFloat(tip) || 0;
+  const peopleCount = parseInt(nop, 10) || 0;
+
+  let totalAmountPerPerson = 0;
+  let tipAmountPerPerson = 0;
+
+  if (peopleCount > 0) {
+    const totalTip = (billInput * tipInput) / 100;
+    tipAmountPerPerson = totalTip / peopleCount;
+    totalAmountPerPerson = (billInput + totalTip) / peopleCount;
+  }
+  return {
+    tipAmount: tipAmountPerPerson.toFixed(2),
+    totalAmount: totalAmountPerPerson.toFixed(2),
+  };
+};
+
 export default function App() {
   const [isReset, setIsReset] = useState(false);
   const [nopInput, setNopInput] = useState("");
@@ -27,6 +46,7 @@ export default function App() {
         setTotalAmount,
         tipAmount,
         setTipAmount,
+        finalCalculation,
       }}
     >
       <div className="w-full min-h-screen bg-custom-gray-200 flex flex-col items-center justify-center">
