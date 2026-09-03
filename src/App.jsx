@@ -7,10 +7,21 @@ export const FormContext = createContext();
 export default function App() {
   const [isReset, setIsReset] = useState(false);
   const [nopInput, setNopInput] = useState("");
+  const [bill, setBill] = useState("");
+  const [tip, setTip] = useState(0);
 
   return (
     <FormContext.Provider
-      value={{ isReset, setIsReset, nopInput, setNopInput }}
+      value={{
+        isReset,
+        setIsReset,
+        nopInput,
+        setNopInput,
+        bill,
+        setBill,
+        tip,
+        setTip,
+      }}
     >
       <div className="w-full min-h-screen bg-custom-gray-200 flex flex-col items-center justify-center">
         <p className="uppercase font-space-mono font-bold text-custom-green-900 tracking-[10px]">
