@@ -26,6 +26,7 @@ export default function NopInput() {
         <input
           onChange={(e) => setNopInput(e.target.value)}
           type="text"
+          value={nopInput}
           placeholder="0"
           className={`bg-slate-100/70 outline-none w-full font-space-mono text-right text-custom-gray-400 font-bold px-4 py-2 rounded-lg ${nopInput === "0" ? "border-2" : ""} ${nopInput === "0" ? "border-red-600" : ""}`}
         />

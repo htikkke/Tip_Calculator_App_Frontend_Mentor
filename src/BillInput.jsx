@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FormContext } from "./App";
 
 export default function BillInput() {
-  const { setBill } = useContext(FormContext);
+  const { bill, setBill } = useContext(FormContext);
   return (
     <div className="flex flex-col">
       {/* label */}
@@ -17,6 +17,7 @@ export default function BillInput() {
         <input
           onChange={(e) => setBill(e.target.value)}
           type="text"
+          value={bill}
           placeholder="0"
           className="bg-slate-100/70 outline-none w-full font-space-mono text-right text-custom-green-900 font-bold px-4 py-2 rounded-lg
           cursor-pointer focus:border-2 focus:border-custom-green-400"
