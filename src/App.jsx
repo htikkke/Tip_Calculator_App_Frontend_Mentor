@@ -50,14 +50,14 @@ export default function App() {
       }}
     >
       <div className="w-full min-h-screen bg-custom-gray-200 flex flex-col items-center justify-center">
-        <p className="uppercase font-space-mono font-bold text-custom-green-900 tracking-[10px]">
+        <p className="uppercase font-space-mono font-bold text-custom-green-900 tracking-[10px] max-[500px]:mt-10">
           Spli
           <br />
           tter
         </p>
         <div
           id="main-container"
-          className="w-full max-w-2xl mt-16 bg-white rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="w-full max-w-2xl mt-10 bg-white rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 max-[500px]:grid-rows-2 gap-8"
         >
           <CalculationContainer />
           <ResultContainer />

@@ -4,7 +4,7 @@ import NopInput from "./NopInput.jsx";
 
 export default function CalculationContainer() {
   return (
-    <div className="flex flex-col gap-8 col-start-1">
+    <div className="flex flex-col gap-8 col-start-1 max-[500px]:row-start-1">
       <BillInput />
       <SelectTipContainer />
       <NopInput />
